@@ -98,7 +98,7 @@ public class Turret extends SubsystemBase {
     return Commands.runOnce(() -> setGoal(goal), this);
   }
 
-  public Command setGoalAndWaitCommand(Rotation2d goal) {
+  public Command goToGoalCommand(Rotation2d goal) {
     return Commands.sequence(
         setGoalCommand(goal),
         Commands.waitUntil(this::isNearGoal));

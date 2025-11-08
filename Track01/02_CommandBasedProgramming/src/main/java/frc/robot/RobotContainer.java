@@ -56,9 +56,9 @@ public class RobotContainer {
     m_driverController.a()
         .whileTrue(
             Commands.sequence(
-                turret.setGoalAndWaitCommand(TurretPosition.GOAL_1.position),
+                turret.goToGoalCommand(TurretPosition.GOAL_1.position),
                 Commands.waitSeconds(0.5),
-                turret.setGoalAndWaitCommand(TurretPosition.GOAL_2.position)))
+                turret.goToGoalCommand(TurretPosition.GOAL_2.position)))
         .onFalse(turret.setGoalCommand(TurretPosition.INITIAL.position));
 
     // Example 2
