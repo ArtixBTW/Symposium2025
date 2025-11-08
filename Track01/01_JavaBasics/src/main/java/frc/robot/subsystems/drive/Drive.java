@@ -19,7 +19,7 @@ import edu.wpi.first.wpilibj2.command.Commands;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.util.SparkUtil;
 
-public class DriveSubsystem extends SubsystemBase {
+public class Drive extends SubsystemBase {
   private final SparkMax frontLeft = new SparkMax(DriveConstants.kFrontLeftId, DriveConstants.kMotorType);
   private final SparkMax frontRight = new SparkMax(DriveConstants.kFrontRightId, DriveConstants.kMotorType);
   private final SparkMax backLeft = new SparkMax(DriveConstants.kBackLeftId, DriveConstants.kMotorType);
@@ -27,7 +27,7 @@ public class DriveSubsystem extends SubsystemBase {
 
   private final DifferentialDrive drive = new DifferentialDrive(frontLeft, frontRight);
 
-  public DriveSubsystem() {
+  public Drive() {
     SparkBaseConfig config = new SparkMaxConfig();
 
     config.idleMode(IdleMode.kBrake);

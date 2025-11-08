@@ -9,7 +9,7 @@ import edu.wpi.first.wpilibj2.command.Commands;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
 import frc.robot.Constants.ControllerConstants;
-import frc.robot.subsystems.drive.DriveSubsystem;
+import frc.robot.subsystems.drive.Drive;
 import frc.robot.util.CommandCustomXboxController;
 
 /**
@@ -20,7 +20,7 @@ import frc.robot.util.CommandCustomXboxController;
  */
 public class RobotContainer {
   // The robot's subsystems and commands are defined here...
-  private final DriveSubsystem m_drive = new DriveSubsystem();
+  private final Drive m_drive = new Drive();
 
   // Replace with CommandPS4Controller or CommandJoystick if needed
   private final CommandCustomXboxController m_driverController =
